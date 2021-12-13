@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Book } from 'src/app/book';
 
@@ -8,6 +8,9 @@ import { Book } from 'src/app/book';
   styleUrls: ['./sample-form.component.css']
 })
 export class SampleFormComponent implements OnInit {
+
+  @Output() newBookEvent = new EventEmitter<Book>();
+  message: string = "";
 
   bookForm: FormGroup = new FormGroup({
     title: new FormControl('', [Validators.required, Validators.minLength(3)]),

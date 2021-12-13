@@ -10,6 +10,10 @@ import { BookDetailsComponent } from './book2/book-details/book-details.componen
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SampleFormComponent } from './book2/sample-form/sample-form.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './user/login/login.component';
+import { RegisterComponent } from './user/register/register.component';
+import { UserListComponent } from './user/user-list/user-list.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { SampleFormComponent } from './book2/sample-form/sample-form.component';
     BookListComponent,
     BookRowComponent,
     BookDetailsComponent,
-    SampleFormComponent
+    SampleFormComponent,
+    HomeComponent,
+    LoginComponent,
+    RegisterComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,
